@@ -40,8 +40,10 @@
   <main>
       
       <section class="module parallax-top">
-          <div id="bg-container">
-          <video id="bg" src="creativeone9.mp4" autoplay="true" loop="true" muted="true"></video>
+         <!-- <video id="bg" src="creativeone9.mp4" autoplay="true" loop="true" muted="true"></video> -->
+         <div id="bg_container">
+        <iframe id="bg" src="https://www.youtube.com/embed/aBrdR1yqntw?autoplay=1&amp;controls=0&amp;loop=1&amp;showinfo=0&amp;modestbranding=1&amp;disablekb=1&amp;enablejsapi=1&amp;playlist=aBrdR1yqntw" frameborder="0"></iframe>
+      </div>
         </div>
       </section>
 
@@ -103,16 +105,29 @@
   
 </div><!-- /#wrapper -->
 
-<!-- analytics -->
 <script type="text/javascript">
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-34160351-1']);
-_gaq.push(['_trackPageview']);
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
+
+var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('bg', {
+            events: {
+                'onReady': onPlayerReady
+            }
+        });
+    }
+
+    function onPlayerReady() {
+        player.playVideo();
+        // Mute!
+        player.mute();
+    }
 </script>
 
 </body>
