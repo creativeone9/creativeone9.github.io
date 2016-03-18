@@ -79,8 +79,15 @@ section.module.parallax h4 {
   text-transform: uppercase;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-section.module.parallax-1 {
-  background-image: url("../img/demo/small/1.jpg");
+section.module.parallax-top {
+  height: 720px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 section.module.parallax-2 {
   background-image: url("../img/demo/small/quote.jpg");
