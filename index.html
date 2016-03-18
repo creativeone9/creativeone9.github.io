@@ -75,10 +75,14 @@
         </div>
       </section>
 
-      <section class="module parallax parallax-3">
-        <div class="container">
-          <h1>Timeline</h1>
+      <section class="module parallax-top">
+        <div id="bg_container">
+          <video id="bg" src="timeline.mp4" autoplay="true" loop="true" muted="true"></video>
         </div>
+      </section>
+
+      <section class="module parallax parallax-3">
+        <div id="container"></div>
       </section>
 
       <section class="module parallax-top">
@@ -100,6 +104,11 @@
   </footer><!-- /footer -->
   
 </div><!-- /#wrapper -->
+
+<!-- And the relevant JavaScript -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="/path/to/unslider.js"></script> <!-- but with the right path! -->
+<script>$(function() { $('.banner').unslider() })</script>
 
 <script type="text/javascript">
 

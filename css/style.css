@@ -94,7 +94,7 @@ section.module.parallax-2 {
     background-size: cover;
 }
 section.module.parallax-3 {
-  background-image: url("../img/demo/small/3.jpg");
+  background-image: url("../img/demo/small/wwd.png");
 }
 
 @media all and (min-width: 600px) {
@@ -228,4 +228,59 @@ section.module.parallax-3 {
   #bg-container{ min-height:720px; overflow:hidden; }
 #bg{ width:100%; min-height:720px; pointer-events: none;}
 #bg-content{ position:absolute; top:0px; padding:0px; color:#FFF;}
+
+.cd-horizontal-timeline .events-content {
+  position: relative;
+}
+.cd-horizontal-timeline .events-content li {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transform: translateX(-100%);
+  opacity: 0;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+}
+.cd-horizontal-timeline .events-content li.selected {
+  /* visible event content */
+  position: relative;
+  z-index: 2;
+  opacity: 1;
+  transform: translateX(0);
+}
+.cd-horizontal-timeline .events-content li.enter-right, 
+.cd-horizontal-timeline .events-content li.leave-right {
+  animation-name: cd-enter-right;
+}
+.cd-horizontal-timeline .events-content li.enter-left, 
+.cd-horizontal-timeline .events-content li.leave-left {
+  animation-name: cd-enter-left;
+}
+.cd-horizontal-timeline .events-content li.leave-right, 
+.cd-horizontal-timeline .events-content li.leave-left {
+  animation-direction: reverse;
+}
+@keyframes cd-enter-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes cd-enter-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
 }
