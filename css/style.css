@@ -94,7 +94,7 @@ section.module.parallax-2 {
     background-size: cover;
 }
 section.module.parallax-3 {
-  background-image: url("../img/demo/small/wwd.png");
+  background-image: url("../img/demo/small/wwd.jpg");
 }
 
 @media all and (min-width: 600px) {
