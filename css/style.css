@@ -45,11 +45,12 @@ section.module.content-white p {
 }
 section.module.content-city {
   text-align: center;
-  height: 50em;
+  height: 100em;
   padding-top: -100em;
   background-image: url("../img/demo/small/atlanta.png");
   background-size: 100%;
-  background-repeat: no-repeat
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 section.module.parallax {
   height: 600px;
@@ -92,6 +93,7 @@ section.module.parallax-top {
 section.module.parallax-2 {
   background-image: url("../img/demo/small/quote.jpg");
     background-size: cover;
+    background-attachment: fixed;
 }
 section.module.parallax-3 {
   background-image: url("../img/demo/small/wwd.jpg");
