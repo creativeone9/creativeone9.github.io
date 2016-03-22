@@ -91,7 +91,7 @@ section.module.parallax-top {
   background-size: cover;
 }
 section.module.parallax-2 {
-  background-image: url("../img/demo/small/quote.jpg");
+  background-image: url("../img/demo/small/quote.png");
     background-size: cover;
     background-attachment: fixed;
 }
