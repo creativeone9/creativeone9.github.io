@@ -45,7 +45,7 @@ section.module.content-white p {
 }
 section.module.content-city {
   text-align: center;
-  height: 100em;
+  height: 50em;
   padding-top: -100em;
   background-image: url("../img/demo/small/atlanta.png");
   background-size: 100%;
